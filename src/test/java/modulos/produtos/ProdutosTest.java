@@ -17,7 +17,7 @@ public class ProdutosTest {
     @BeforeEach
     public void beforeEach(){
         //Abrir navegador
-        System.setProperty("webdriver.chrome.driver","C:\\Drivers\\chromedriver_win32\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","./Drivers/chromedriver.exe");
          this.navegador = new ChromeDriver();
         // Vou maximizar a tela
         this.navegador.manage().window().maximize();
