@@ -87,6 +87,26 @@ public class ProdutosTest {
 
     }
 
+    @Test
+    @DisplayName("Posso adicionar produtos com valor de 70000")
+    public void testAdcionarProdutoComSucessoProduto70000(){
+
+        String mensagemApresentada =  new LoginPage(navegador)
+                .informaroUsuario("admin")
+                .informarSenha("admin")
+                .submeterFormularioDeLogin()
+                .acessarFormularioAdicaoNovoProduto()
+                .informarNomeDoProduto("PS5")
+                .informarValorDoProduto("700000")
+                .informarCorDoProduto("Azul")
+                .submeterFormularioDeAdicaoComSucesso()
+                .capturarMensagemApresentada();
+
+        Assertions.assertEquals("Produto adicionado com sucesso", mensagemApresentada);
+
+
+
+    }
 
         @AfterEach
         public void afterEach(){
